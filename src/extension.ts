@@ -7,14 +7,21 @@ const assetRootDir = path.join(__dirname, "./template");
 export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
     "create-react-fc-component.helloWorld",
-    async (url) => {
-      await fs.readFile(`${assetRootDir}/index.tsx`, "utf8", (err, data) => {
-        if (err) {
-          console.error(err);
-          return;
-        }
-        console.log(data);
-      });
+    (url: any) => {
+      console.log(url);
+      
+      vscode.window
+        .showInputBox({
+          prompt:
+            "Please enter component name like component-name then I can convert it to PascalCase for you.",
+        })
+        .then((componentName: any) => {
+         
+
+          createComponent(url.path.slice(1), componentName);
+        });
+
+      // createComponent(url.path, )
     }
   );
 
@@ -22,13 +29,20 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 async function createComponent(path: string, componentName: string) {
-  //   await fs.writeFileSync(
-  //     `${path}/index.tsx`,
-  //   );
-  //   await fs.writeFileSync(
-  //     `${path}/index.less`,
-  //     fs.readFileSync(`${assetRootDir}/index.less`)
-  //   );
+ 
+  console.log(path);
+  
+  try {
+    const flag = await fs.existsSync(`${path}/${componentName}`);
+
+    if (!flag) {
+      await fs.mkdirSync(`${path}/${componentName}`);
+      await fs.writeFile(`${path}/${componentName}/index.tsx`, "", () => {});
+      await fs.writeFile(`${path}/${componentName}//index.less`, "", () => {});
+    }
+  } catch (err) {
+    console.error(err);
+  }
 }
 
 function replaceComponentName(componentName: string) {

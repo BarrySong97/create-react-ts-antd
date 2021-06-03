@@ -1,0 +1,62 @@
+{
+  "react ts fc": {
+    "prefix": "rtfc",
+    "body": [
+      "import React, { FC } from 'react';",
+      "export interface $1Props {",
+      "  height: number;",
+      "}",
+      "const $1: FC = () => {",
+      "  return (",
+      "    <div>",
+      "      Hello $1",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default $1;"
+    ],
+    "description": "react ts fc"
+  },
+  "useModalVisible": {
+    "prefix": "umv",
+    "body": [
+      "const [$1ModalVisible, set$1ModalVisible] = useState<boolean>(false);"
+    ],
+    "description": "useModalVisible"
+  },
+  "ant-modal": {
+    "prefix": "amodal",
+    "body": [
+      "import React, { FC } from 'react';",
+      "import {  Modal } from 'antd';",
+      "export interface $1ModalProps {",
+      "  visible: boolean;",
+      "  onOk: () => void;",
+      "  onCancel: () => void;",
+      " ",
+      "}",
+      "",
+      "const $1Modal: FC<$1ModalProps> = (props) => {",
+      "  const { visible, onOk, onCancel } = props;",
+      "",
+      "  return (",
+      "    <Modal",
+      "      title=\"$1Modal\"",
+      "      centered",
+      "      destroyOnClose",
+      "      visible={visible}",
+      "      onOk={onOk}",
+      "      onCancel={onCancel}",
+      "    >",
+      "     Hello $1Modal",
+      "    </Modal>",
+      "  );",
+      "};",
+      "",
+      "export default $1Modal;",
+      ""
+    ],
+    "description": "ant-modal"
+  }
+}

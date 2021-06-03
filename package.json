@@ -28,7 +28,13 @@
           "group": "navigation"
         }
       ]
-    }
+    },
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/ahooks.json"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
