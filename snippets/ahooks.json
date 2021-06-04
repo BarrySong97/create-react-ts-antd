@@ -27,10 +27,5 @@
     "prefix": "usz",
     "body": ["const ref = useRef();", "const size = useSize(ref);"],
     "description": "useSize"
-  },
-  "useHahaha": {
-    "prefix": "ushhh",
-    "body": ["hahhaha"],
-    "description": "useHahaha"
   }
 }

@@ -5,7 +5,7 @@ const rootDir = path.join(__dirname, "../templates");
 
 export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
-    "create-react-fc-component.helloWorld",
+    "create-react-fc-component.create",
     (url: any) => {
       vscode.window
         .showInputBox({

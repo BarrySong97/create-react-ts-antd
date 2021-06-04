@@ -2,7 +2,13 @@
   "name": "create-react-fc-component",
   "displayName": "create react fc component",
   "description": "",
-  "version": "0.0.1",
+  "icon": "images/react_ts.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BarrySong97/create-react-ts-antd"
+  },
+  "publisher": "BarrySong4Real",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.56.0"
   },
@@ -10,13 +16,13 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:create-react-fc-component.helloWorld"
+    "onCommand:create-react-fc-component.create"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "create-react-fc-component.helloWorld",
+        "command": "create-react-fc-component.create",
         "title": "create react fc component"
       }
     ],
@@ -24,7 +30,7 @@
       "explorer/context": [
         {
           "when": "explorerResourceIsFolder",
-          "command": "create-react-fc-component.helloWorld",
+          "command": "create-react-fc-component.create",
           "group": "2_workspace"
         }
       ]
