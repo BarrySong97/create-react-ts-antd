@@ -25,14 +25,18 @@
         {
           "when": "explorerResourceIsFolder",
           "command": "create-react-fc-component.helloWorld",
-          "group": "navigation"
+          "group": "2_workspace"
         }
       ]
     },
     "snippets": [
       {
-        "language": "javascript",
+        "language": "typescriptreact",
         "path": "./snippets/ahooks.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/antd-component.json"
       }
     ]
   },

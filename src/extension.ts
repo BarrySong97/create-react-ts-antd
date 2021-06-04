@@ -1,5 +1,4 @@
 import * as vscode from "vscode";
-
 import * as fs from "fs";
 import * as path from "path";
 const rootDir = path.join(__dirname, "../templates");
@@ -8,15 +7,15 @@ export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
     "create-react-fc-component.helloWorld",
     (url: any) => {
-      console.log(url);
-
       vscode.window
         .showInputBox({
           prompt:
             "Please enter component name like component-name then I can convert it to PascalCase for you.",
         })
         .then((componentName: any) => {
-          createComponent(url.path.slice(1), componentName);
+          if (componentName) {
+            createComponent(url.path.slice(1), componentName);
+          }
         });
 
       // createComponent(url.path, )

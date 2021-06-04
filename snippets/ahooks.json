@@ -1,31 +1,36 @@
 {
   "useInterval": {
-    "prefix": "ah-ui",
+    "prefix": "ui",
     "body": [" useInterval(() => {}, 1000);"],
     "description": "useInterval"
   },
   "useTimeout": {
-    "prefix": "ah-uto",
+    "prefix": "uto",
     "body": ["useTimeout(() => {}, 3000);"],
     "description": "useTimeout"
   },
   "useBoolean": {
-    "prefix": "ah-ub",
+    "prefix": "ub",
     "body": [
       "const [state, { toggle, setTrue, setFalse }] = useBoolean(true);"
     ],
     "description": "useBoolean"
   },
   "useLocalStorageState": {
-    "prefix": "ah-uls",
+    "prefix": "uls",
     "body": [
       " const [message, setMessage] = useLocalStorageState('user-message', 'Hello~');"
     ],
     "description": "useLocalStorageState"
   },
   "useSize": {
-    "prefix": "ah-usz",
+    "prefix": "usz",
     "body": ["const ref = useRef();", "const size = useSize(ref);"],
     "description": "useSize"
+  },
+  "useHahaha": {
+    "prefix": "ushhh",
+    "body": ["hahhaha"],
+    "description": "useHahaha"
   }
 }

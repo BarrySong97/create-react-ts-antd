@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 export interface ComponentNameProps {
-  height: number;
+
 }
 const ComponentName: FC = () => {
   return (
