@@ -1,0 +1,12 @@
+{
+  "import classes from 'classnames';": {
+    "prefix": "imc",
+    "body": ["import classes from 'classnames';"],
+    "description": "import classes from 'classnames';"
+  },
+  "import styles from './index.less';s';": {
+    "prefix": "ims",
+    "body": ["import styles from './index.less';"],
+    "description": "import styles from './index.less';s';"
+  }
+}

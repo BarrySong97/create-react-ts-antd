@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 export interface ComponentNameProps {
 
 }
-const ComponentName: FC = () => {
+const ComponentName: FC<ComponentNameProps> = () => {
   return (
     <div>
       Hello ComponentName

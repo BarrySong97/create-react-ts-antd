@@ -1,0 +1,7 @@
+{
+  "use boolean state": {
+    "prefix": "usb",
+    "body": ["const [$1, set$1] = useState<boolean>(false);"],
+    "description": "use boolean state"
+  }
+}
